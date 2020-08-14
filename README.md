@@ -1,13 +1,10 @@
 <h1 align="center">Let's learn best practices together 👋</h1>
 <p>
-  <a href="https://www.npmjs.com/package/lit-web" target="_blank">
-    <img alt="Version" src="https://img.shields.io/npm/v/lit-web.svg">
-  </a>
   <a href="https://github.com/gabrielgrs/lit-web" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
   <a href="#" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+    <img alt="License: MOZILLA" src="https://img.shields.io/badge/License-MOZILLA-orange.svg" />
   </a>
 </p>
 
