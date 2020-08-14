@@ -4,7 +4,7 @@
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
   <a href="#" target="_blank">
-    <img alt="License: MOZILLA" src="https://img.shields.io/badge/License-MOZILLA-orange.svg" />
+    <img alt="License: MOZILLA" src="https://img.shields.io/badge/License-0BSD-orange.svg" />
   </a>
 </p>
 

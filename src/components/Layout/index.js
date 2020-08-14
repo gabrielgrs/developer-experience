@@ -25,7 +25,7 @@ Layout.propTypes = {
 Layout.defaultProps = {
   title: 'Developer Experience',
   lang: 'en',
-  description: 'Website developed to developers',
+  description: 'Website developed for developers',
 }
 
 export default Layout
