@@ -1,48 +1,28 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import Bash from '../components/Bash'
 
-import {
-  Main,
-  Title,
-  Heart,
-  Bash,
-  BashHeader,
-  BashActions,
-  BashContent,
-  Dot,
-  TypeWritter,
-} from '../styles/home'
+import { Main, Title, Heart, TypeWritter } from '../styles/home'
 
 function Home() {
   return (
     <Layout>
       <Main>
         <Title>
-          Welcome{' '}
-          <i>
-            <u>dear</u>veloper
-          </i>
+          <TypeWritter index={0}>
+            Welcome{' '}
+            <i>
+              <u>dear</u>veloper
+            </i>
+          </TypeWritter>
+          <TypeWritter index={1}>Let's embrace our dreams!</TypeWritter>
         </Title>
         <Heart>
           <span role="img" aria-label="heart emoji">
             ❤️
           </span>
         </Heart>
-        <Bash>
-          <BashHeader>
-            <div>Bash ~</div>
-            <BashActions>
-              <Dot color="red" />
-              <Dot color="yellow" />
-              <Dot color="green" />
-            </BashActions>
-          </BashHeader>
-          <BashContent>
-            <div>{'>'} console.log('developer')</div>
-            <TypeWritter index={0}>Let's learn together!</TypeWritter>
-            <TypeWritter index={1}>Let's embrace our dreams!</TypeWritter>
-          </BashContent>
-        </Bash>
+        <Bash initialMessages={[{ message: 'Hi there! ~ 👋' }]} />
       </Main>
     </Layout>
   )
