@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import SWUpdater from './src/components/SWUpdate'
+import SWUpdater from './src/components/SWUpdater'
 
 function onServiceWorkerUpdateReady() {
   const root = document.createElement('div')
