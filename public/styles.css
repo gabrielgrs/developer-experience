@@ -20,7 +20,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  padding: 10%;
 }
 
 .heart {
@@ -35,4 +35,119 @@ main {
   -o-transition: background-color 300ms linear, color 1s linear;
   -ms-transition: background-color 300ms linear, color 1s linear;
   transition: background-color 300ms linear, color 1s linear;
+}
+
+.bash {
+  background: #0d0d0d;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.2);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.2);
+}
+
+.bash-header {
+  border-radius: 8px;
+  background: #0d0d0d;
+  color: silver;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.bash-actions {
+  display: flex;
+  align-items: center;
+}
+
+.bash-content {
+  padding: 10px;
+  line-height: 30px;
+}
+
+.dot {
+  margin: 0 5px 2px;
+  width: 11px;
+  height: 11px;
+  border-radius: 100px;
+  background: white;
+}
+
+.red {
+  background: red;
+}
+
+.green {
+  background: green;
+}
+
+.yellow {
+  background: yellow;
+}
+
+.text_1 {
+  animation: text1;
+}
+
+.text_2 {
+  animation: text2;
+}
+
+.text_1,
+.text_2 {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  animation-duration: 18s;
+  animation-timing-function: steps(25, end);
+  animation-iteration-count: infinite;
+}
+
+.text_1::after,
+.text_2::after {
+  content: '|';
+  position: absolute;
+  right: 0;
+  animation: caret infinite;
+  animation-duration: 1s;
+  animation-timing-function: steps(1, end);
+}
+
+@keyframes text1 {
+  0%,
+  50%,
+  100% {
+    width: 0;
+  }
+
+  10%,
+  40% {
+    width: 10em;
+  }
+}
+
+@keyframes text2 {
+  0%,
+  50%,
+  100% {
+    width: 0;
+  }
+
+  60%,
+  90% {
+    width: 12em;
+  }
+}
+
+@keyframes caret {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }

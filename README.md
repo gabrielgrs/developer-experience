@@ -8,7 +8,7 @@
   </a>
 </p>
 
-> LIT - Saint Paul courses
+> Developer Experience - superset of best practices to apply in awesome projects ;)
 
 ### 🏠 [Homepage](https://github.com/gabrielgrs/developer-experience)
 
@@ -34,7 +34,7 @@ yarn run test
 
 👤 **Gabriel Ribeiro**
 
-- Website: http://gabrielgrs.github.io/
+- Website: https://developer-experience.vercel.app/
 - Twitter: [@\_gabuki](https://twitter.com/_gabuki)
 - Github: [@gabrielgrs](https://github.com/gabrielgrs)
 
