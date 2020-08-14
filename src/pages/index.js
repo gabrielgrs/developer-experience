@@ -11,7 +11,7 @@ import {
   BashContent,
   Dot,
   TypeWritter,
-} from './styles'
+} from '../styles/home'
 
 function Home() {
   return (
