@@ -7,7 +7,7 @@ import { Main, Title, Heart, TypeWritter } from '../styles/home'
 
 function Home() {
   useEffect(() => {
-    console.log(`Hi there! ~ ${getRandomEmoji()}}`)
+    console.log(`%cHi there! ~ ${getRandomEmoji()}}`, 'color: #8338EC;')
   }, [])
 
   return (
