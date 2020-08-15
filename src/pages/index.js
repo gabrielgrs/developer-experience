@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Layout from '../components/Layout'
 import Bash from '../components/Bash'
+import { getRandomEmoji } from '../helpers/emojis'
 
 import { Main, Title, Heart, TypeWritter } from '../styles/home'
 
 function Home() {
+  useEffect(() => {
+    console.log(`Hell there! ~ ${getRandomEmoji()}}`)
+  }, [])
+
   return (
     <Layout>
       <Main>
@@ -22,7 +27,7 @@ function Home() {
             ❤️
           </span>
         </Heart>
-        <Bash initialMessages={[{ message: 'Hi there! ~ 👋' }]} />
+        <Bash interative initialMessages={[{ message: 'Hi there! ~ 👋' }]} />
       </Main>
     </Layout>
   )

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import { logTypes } from '../../helpers/bash'
 
 import {
   Wrapper,
@@ -14,16 +15,11 @@ import {
 } from './styles'
 
 function Bash({ initialMessages, interative }) {
-  const logTypes = {
-    input: 'input',
-    output: 'output',
-  }
-
   const [isFullscreen, setIsFullscreen] = useState(false)
   const [isMinized, setIsMinized] = useState(false)
   const [isClosed, setIsClosed] = useState(false)
+  const [messages, setMessages] = useState(initialMessages)
   const [value, setValue] = useState('')
-  const [log, setLog] = useState(initialMessages)
 
   const checkMessage = (message) => {
     const current = [{ message, type: logTypes.input }]
@@ -33,14 +29,18 @@ function Bash({ initialMessages, interative }) {
   const onKeyDown = (e) => {
     if (e.keyCode === 13) {
       const newMessages = checkMessage(value)
-      setLog((prev) => [...prev, ...newMessages])
+      setMessages((prev) => [...prev, ...newMessages])
       setValue('')
     }
   }
 
   const onMinimize = () => setIsMinized((prev) => !prev)
   const onMaximize = () => setIsFullscreen((prev) => !prev)
-  const onClose = () => setIsClosed((prev) => !prev)
+
+  const onClose = () => {
+    setIsClosed((prev) => !prev)
+    setMessages([])
+  }
 
   if (isClosed) {
     return (
@@ -68,7 +68,7 @@ function Bash({ initialMessages, interative }) {
         </Actions>
       </Header>
       <Content isFullscreen={isFullscreen}>
-        {log.map((l, index) => (
+        {messages.map((l, index) => (
           <Message isInput={l.type === logTypes.input} key={index}>
             {l.message}
           </Message>
