@@ -7,7 +7,7 @@ module.exports = {
         short_name: `DevXP`,
         start_url: `/`,
         background_color: `#0b0b0b`,
-        theme_color: `#darkred`,
+        theme_color: `darkred`,
         display: `fullscreen`,
         icon: 'src/images/logo192.png',
       },
