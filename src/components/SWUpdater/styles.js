@@ -32,7 +32,7 @@ export const Wrapper = styled.div`
 export const Text = styled.p``
 
 export const Icon = styled.div`
-  color: ${({ theme }) => theme.colors.white};
+  color: white;
   width: 30px;
   height: 30px;
   margin: 0 10px;
